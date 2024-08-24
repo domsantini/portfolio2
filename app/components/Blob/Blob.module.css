@@ -1,0 +1,13 @@
+.blobStyles {
+  translate: -50% -50%;
+  animation: rotateBlob 20s infinite;
+}
+
+@keyframes rotateBlob {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
