@@ -1,0 +1,32 @@
+
+/* @keyframes scroll {
+  from {
+    transform: translate3d(0,0,0)
+  }
+  to {
+    transform: translate3d(calc(-100% - var(--gap)),0,0);
+  }
+} */
+ 
+.marqueeContainer {
+  --gap: 2rem;
+  
+  display: flex;
+  flex: 0 0 auto;
+  
+  overflow: hidden;
+  width: 100%;
+}
+
+.marqueeText {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  
+  font-family: 'Chillax';
+  font-size: 10vw;
+  font-weight: 600;
+}
+ 

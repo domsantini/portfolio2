@@ -8,14 +8,18 @@
 }
 
 @font-face {
-  font-family: junction-bold;
-  src: url('/public/fonts/junction-bold.woff');
+  font-family: 'junction-bold';
+  src: url(../public/fonts/junction-bold.ttf);
 }
 @font-face {
-  font-family: junction-light;
-  src: url('/public/fonts/junction-light.woff');
+  font-family: 'junction-light';
+  src: url(../public/fonts/junction-light.ttf);
 }
 @font-face {
-  font-family: junction-regular;
-  src: url('/public/fonts/junction-regular.woff');
+  font-family: 'junction-regular';
+  src: url(../public/fonts/junction-regular.ttf);
+}
+@font-face {
+  font-family: 'chillax';
+  src: url(../public/fonts/Chillax-Variable.ttf);
 }

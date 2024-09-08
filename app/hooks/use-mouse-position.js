@@ -1,32 +1,33 @@
-'use client'
-import React from 'react'
+"use client";
+import React from "react";
 
 export default function useMousePosition() {
-  const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0})
-  const [scrollY, setScrollY] = React.useState(0)
-  
+  const [mousePosition, setMousePosition] = React.useState({
+    x: 0,
+    y: 0,
+  });
+
   React.useEffect(() => {
-    if (typeof window == undefined) {
-      return
-    }
-    
-    window.addEventListener('mousemove', updateMousePosition)
-    window.addEventListener('scroll', handleScroll)
-    
+    window.addEventListener("mousemove", updateMousePosition);
+    window.addEventListener("mouseover", updateMousePosition);
+    window.addEventListener("scroll", updateMousePosition);
+
     function updateMousePosition(event) {
-      setMousePosition({ x: event.clientX, y: event.clientY })
+      if (window.scrollY) {
+        const yPosition = event.clientY + window.scrollY
+        
+        setMousePosition({ x: event.clientX, y: yPosition });
+      } else {
+        setMousePosition({ x: event.clientX, y: event.clientY });
+      }
     }
-    
-    function handleScroll() {
-      setScrollY(window.scrollY)
-      setMousePosition(prevMP => ({...prevMP, y: prevMP.y + scrollY}))
-    }
-    
+
     return () => {
-      window.removeEventListener('mousemove', updateMousePosition) 
-      window.removeEventListener('scroll', handleScroll) 
-    }
-  }, [])
-  
-  return mousePosition
+      window.removeEventListener("mousemove", updateMousePosition);
+      window.removeEventListener("mouseover", updateMousePosition);
+      window.removeEventListener("scroll", updateMousePosition);
+    };
+  }, []);
+
+  return mousePosition;
 }

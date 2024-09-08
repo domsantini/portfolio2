@@ -9,10 +9,8 @@ export default function Blob() {
   const mousePosition = useMousePosition()
   
   React.useEffect(() => {
-    const scrollY = window.scrollY
-    
     blobRef.current.animate({
-      top: `${mousePosition.y + scrollY}px`,
+      top: `${mousePosition.y}px`,
       left: `${mousePosition.x}px`
     }, { duration: 5000, fill: 'forwards'})
     

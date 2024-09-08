@@ -16,6 +16,7 @@ module.exports = {
         'junction-bold': ['"junction-bold"'],
         'junction-light': ['"junction-light"'],
         'junction-regular': ['"junction-regular"'],
+        'chillax': ['"chillax"'],
       }
     },
   },
