@@ -17,7 +17,7 @@ export default function Marquee({ children }) {
       <motion.div
         className={styles.marqueeText}
         animate={{ x: '-100%'}}
-        transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
+        transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
       >
         <p>{ children }</p>
         <p>{ children }</p>
@@ -25,7 +25,7 @@ export default function Marquee({ children }) {
       <motion.div
         className={styles.marqueeText}
         animate={{ x: '-100%'}}
-        transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
+        transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
       >
         <p>{ children }</p>
         <p>{ children }</p>
