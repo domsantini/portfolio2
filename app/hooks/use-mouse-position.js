@@ -6,28 +6,21 @@ export default function useMousePosition() {
     x: 0,
     y: 0,
   });
-
+  
+  function handleMouseMove(event) {
+    setMousePosition({
+      x: event.clientX,
+      y: event.clientY
+    })
+  }
+    
   React.useEffect(() => {
-    window.addEventListener("mousemove", updateMousePosition);
-    window.addEventListener("mouseover", updateMousePosition);
-    window.addEventListener("scroll", updateMousePosition);
-
-    function updateMousePosition(event) {
-      if (window.scrollY) {
-        const yPosition = event.clientY + window.scrollY
-        
-        setMousePosition({ x: event.clientX, y: yPosition });
-      } else {
-        setMousePosition({ x: event.clientX, y: event.clientY });
-      }
-    }
-
+    window.addEventListener("mousemove", handleMouseMove)
+    
     return () => {
-      window.removeEventListener("mousemove", updateMousePosition);
-      window.removeEventListener("mouseover", updateMousePosition);
-      window.removeEventListener("scroll", updateMousePosition);
-    };
-  }, []);
+      window.removeEventListener("mousemove", handleMouseMove)
+    }
+  }, [])
 
   return mousePosition;
 }
