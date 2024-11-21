@@ -1,7 +1,16 @@
-.blobStyles {
+.Mouse {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  border-radius: 100%;
   translate: -50% -50%;
   animation: rotateBlob 20s infinite;
 }
+
+/* .blobStyles {
+  translate: -50% -50%;
+  animation: rotateBlob 20s infinite;
+} */
 
 @keyframes rotateBlob {
   from {

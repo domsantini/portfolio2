@@ -1,28 +1,43 @@
 'use client'
+import React from 'react'
+import { useScroll } from 'framer-motion';
 
+import Blob from './components/Blob/Blob'
+import Navbar from "./components/Navbar.jsx";
 import LandingSection from "./components/LandingSection";
+import MainContentWrapper from "./components/MainContentWrapper";
 import WorkSection from "./components/WorkSection";
 import AboutSection from "./components/AboutSection";
+import ContactSection from "./components/ContactSection.jsx";
 
 export default function Home() {  
+  
+  const container = React.useRef();
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start start', 'center end']
+  })
+  
   return (
-    <main className='min-h-screen bg-[#FBFCF8]'>
-      <section className='sticky top-0 grid place-content-center h-screen w-full border border-solid border-red-400'>
-        <p>Landing section</p>
-      </section>
-      <section className='bg-lime-300 sticky top-0 grid place-content-center h-screen w-full border border-solid border-green-400'>
-        <p>Content section</p>
-      </section>
-      <div 
+    <main ref={container} className='relative bg-[#FBFCF8] h-full'>
+      <Blob />
+      <Navbar />
+      <LandingSection scrollYProgress={scrollYProgress}/>
+      <MainContentWrapper scrollYProgress={scrollYProgress}>
+        <WorkSection id='work'/>
+        <AboutSection id='about' />
+      </MainContentWrapper>
+      <ContactSection />
+      {/* <div 
         className='relative h-[500px] bg-slate-300 border border-solid border-red-500'
         style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
       >
-        <div className='relative h-[calc(100vh+500px)] -top-[100vh]'>
-          <div className='sticky top-[calc(100vh-500px)] h-[500px] flex items-end'>
+        <div className='relative h-[calc(200vh+500px)] -top-[200vh]'>
+          <div className='sticky top-[calc(200vh-500px)] h-[500px] flex items-end'>
             <p>Footer content stuff</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }
