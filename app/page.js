@@ -20,14 +20,14 @@ export default function Home() {
   
   return (
     <main ref={container} className='relative bg-[#FBFCF8] h-full'>
-      <Blob />
+      {/* <Blob /> */}
       <Navbar />
       <LandingSection scrollYProgress={scrollYProgress}/>
       <MainContentWrapper scrollYProgress={scrollYProgress}>
         <WorkSection id='work'/>
         <AboutSection id='about' />
       </MainContentWrapper>
-      <ContactSection />
+      {/* <ContactSection /> */}
       {/* <div 
         className='relative h-[500px] bg-slate-300 border border-solid border-red-500'
         style={{ clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}
