@@ -1,23 +1,17 @@
 "use client";
-import React from "react";
-import { motion, useTransform } from "framer-motion";
 
-export default function LandingSection({ scrollYProgress }) {
-  
-  // const input = [0,1]
-  // const output = [1,0]
-  const input = [0,0.3,0.5]
-  const output = [1,0.1,0]
-  const opacity = useTransform(scrollYProgress, input, output)
-  const y = useTransform(scrollYProgress,[0,1],[0,-100]) 
-  
+export default function LandingSection() {
   return (
-    <motion.section style={{ opacity, y }} className="sticky top-0 h-screen">
-      <div className='relative w-full h-screen flex flex-col justify-end p-2'>  
-        <p className='text-balance mb-40'>
-          Frontend developer with a soft spot for rounded corners and smooth
-          animations. Currently deepening my skills in design and building with
-          React.
+    <section className="h-[100dvh] p-4 md:px-8 lg:px-20 lg:pb-8">
+      <div className='flex flex-col justify-end h-full'>  
+        <p className='text-sm lg:text-base leading-3 text-pretty mb-24 ml-auto mr-0 max-w-[285px] lg:max-w-[410px]'>
+          <span className='block  leading-snug'>
+            I design and develop digital experiences that combine my love of clean aesthetics and tasteful animations. 
+          </span>
+          <br />
+          <span className='block leading-snug'>
+            My focus is on the polish that makes users pause and feel something extraordinary. 
+          </span>
         </p>
         <h1 className="font-chillax font-semibold text-[clamp(50px,9vw,140px)] leading-[0.95]">
           Hey!
@@ -25,6 +19,6 @@ export default function LandingSection({ scrollYProgress }) {
           I'm Dom 👋🏼
         </h1>
       </div>
-    </motion.section>
+    </section>
   );
 }

@@ -3,14 +3,9 @@ import { projects } from '@/app/data.js'
 
 function WorkSection({ id }) {  
   return (
-    <section id={id} className='relative h-screen flex flex-col justify-end pt-10 text-[#E6E8E3] border-2 border-solid border-red-400'>
-      <div className='sticky top-0 h-full border-2 border-solid border-orange-400'>
-        {projects.map(project => (
-          <div>
-            <h1>{project.title}</h1>
-            <p>{project.description}</p>
-          </div>
-        ))}
+    <section id={id} className='relative h-screen flex flex-col justify-end pt-10 text-[#E6E8E3]'>
+      <div className='sticky top-0 h-full'>
+        
       </div>
       <h1 className="absolute bottom-2 text-[#E6E8E3] text-[clamp(50px,9vw,140px)] font-chillax font-semibold">Select Work</h1>    
     </section>
