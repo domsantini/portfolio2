@@ -4,7 +4,8 @@ export default function LandingSection() {
   return (
     <section className="h-[100dvh] p-4 md:px-8 lg:px-20 lg:pb-8">
       <div className='flex flex-col justify-end h-full'>  
-        <p className='text-sm lg:text-base leading-3 text-pretty mb-24 ml-auto mr-0 max-w-[285px] lg:max-w-[410px]'>
+        <p className='text-sm lg:text-base leading-3 text-pretty mb-24 mx-auto xs:ml-auto xs:mr-0 max-w-[285px] lg:max-w-[410px]'>
+        
           <span className='block  leading-snug'>
             I design and develop digital experiences that combine my love of clean aesthetics and tasteful animations. 
           </span>
