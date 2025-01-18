@@ -1,13 +1,23 @@
-import { animate, motion } from "framer-motion";
+'use client'
+import { animate, motion } from 'framer-motion'
 
-export default function RevealText({ id, children }) {
+function RevealText({ children }) {
   return (
-    <div
-      id={id}
-      initial="initial"
-      className="relative font-chillax font-semibold text-[20vw] overflow-hidden"
+    <motion.span
+      initial='initial'
+      animate='animate'
+      className='block overflow-hidden whitespace-nowrap bg-red-200'
     >
-      <p>{children}</p>
-    </div>
-  );
+      <motion.div
+        variants={{
+          initial: {y: '100%'},
+          animate: {y: 0}
+        }}
+      >
+        { children }
+      </motion.div>
+    </motion.span>
+  )
 }
+
+export default RevealText;

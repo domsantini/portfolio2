@@ -1,4 +1,4 @@
-"use client";
+import RevealText from "./RevealText";
 
 export default function LandingSection() {
   return (
@@ -14,10 +14,10 @@ export default function LandingSection() {
             My focus is on the polish that makes users pause and feel something extraordinary. 
           </span>
         </p>
-        <h1 className="font-chillax font-semibold text-[clamp(50px,9vw,140px)] leading-[0.95]">
-          Hey!
-          <br />
-          I'm Dom 👋🏼
+        {/* <h1 className="font-chillax font-semibold text-[clamp(50px,9vw,140px)] leading-[0.95]"> */}
+        <h1 className="font-chillax font-semibold text-[clamp(50px,9vw,140px)] leading-tight bg-green-300">
+          <RevealText>Hey!</RevealText>
+          <RevealText>I'm Dom 👋🏼</RevealText>
         </h1>
       </div>
     </section>
