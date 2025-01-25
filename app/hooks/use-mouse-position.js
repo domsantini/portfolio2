@@ -14,7 +14,6 @@ const useMousePosition = () => {
 
   React.useEffect(() => {
     const updateMouseMove = (ev) => {
-      // setMousePosition({ x: ev.clientX, y: ev.clientY });
 
       prevPosition.current = {
         x: ev.clientX,
@@ -27,7 +26,6 @@ const useMousePosition = () => {
     const updateScroll = (ev) => {
       scrollOffset.current = window.scrollY;
 
-      // setMousePosition({ x: ev.clientX, y: ev.clientY });
 
       mousePosition.y.set(prevPosition.current.y + scrollOffset.current);
     };
@@ -39,7 +37,7 @@ const useMousePosition = () => {
       window.removeEventListener("mousemove", updateMouseMove);
       window.removeEventListener("scroll", updateScroll);
     };
-  }, []);
+  }, [mousePosition.x, mousePosition.y]);
 
   return mousePosition;
 };

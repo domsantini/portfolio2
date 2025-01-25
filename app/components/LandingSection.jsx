@@ -1,7 +1,7 @@
 'use client'
 
 import RevealText from "./RevealText";
-import { motion, spring } from 'framer-motion'
+import { motion } from 'framer-motion'
 import useMotionTimeline from "../hooks/useMotionTimeline";
 
 export default function LandingSection({ id }) {
@@ -24,7 +24,7 @@ export default function LandingSection({ id }) {
           }}
           className='text-sm lg:text-base leading-3 text-pretty mb-24 mx-auto xs:ml-auto xs:mr-0 max-w-[285px] lg:max-w-[410px]'
         >
-          <span className='block  leading-snug'>
+          <span className='block leading-snug'>
             I design and develop digital experiences that combine my love of clean aesthetics and tasteful animations. 
           </span>
           <br />
@@ -32,11 +32,10 @@ export default function LandingSection({ id }) {
             My focus is on the polish that makes users pause and feel something extraordinary. 
           </span>
         </motion.p>
-        {/* <h1 className="font-chillax font-semibold text-[clamp(50px,9vw,140px)] leading-[0.95]"> */}
         <h1 className="font-chillax font-semibold text-[clamp(50px,9vw,140px)]">
           <RevealText duration='0.4' delay='0.5' ease="easeOut">Hey!</RevealText>
           <RevealText duration='0.4' delay="0.7" ease="easeOut">
-            I'm Dom {' '} 
+            {`I'm Dom `} 
             <motion.span 
               className='inline-block hand-emoji' 
               style={{ 
