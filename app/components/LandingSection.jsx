@@ -12,7 +12,7 @@ export default function LandingSection({ id }) {
   ]);
   
   return (
-    <section id={id} ref={scope} className="sticky top-0 h-[100dvh] p-4 md:px-8 lg:px-20 lg:pb-8">
+    <section id={id} ref={scope} className="sticky top-0 h-[100svh] p-4 md:px-8 lg:px-20 lg:pb-8">
       <div className='flex flex-col justify-end h-full'>  
         <motion.p 
           initial={{ y: 10, opacity: 0}}

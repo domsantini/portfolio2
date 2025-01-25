@@ -3,7 +3,7 @@ import { projects } from '@/app/data.js'
 
 function WorkSection({ id }) {  
   return (
-    <section id={id} className='relative min-h-screen h-[100dvh] flex flex-col justify-end pt-10 text-[#E6E8E3] bg-zinc-700'>
+    <section id={id} className='relative min-h-screen h-[100svh] flex flex-col justify-end pt-10 text-[#E6E8E3] bg-zinc-700'>
       <div className='h-full'>
         
       </div>
