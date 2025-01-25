@@ -2,7 +2,16 @@
 import Link from "next/link";
 import { motion } from 'framer-motion'
 
+const NAV_ITEMS = [
+  {name: 'Home', href: '#'},
+  {name: 'Work', href: '#work'},
+  {name: 'About', href: '#about'},
+  {name: 'Contact', href: '#contact'},
+]
+
 function Navbar() {
+  
+  
   return (
     <motion.nav 
       initial={{ x: '-50%', y: -10, opacity: 0 }}
@@ -12,11 +21,11 @@ function Navbar() {
         delay: '0.7',
         duration: '0.4'
       }}
-      className="absolute top-5 left-1/2 -translate-x-1/2 border-2 border-solid border-black rounded-full uppercase px-4 py-2"
+      className="isolate z-10 fixed top-5 left-1/2 -translate-x-1/2 border-2 border-solid border-black rounded-full uppercase px-4 py-2"
     >
       <ul className="flex gap-4">
         <li>
-          <Link href="#">Home</Link>
+          <Link href="#home">Home</Link>
         </li>
         <li>
           <Link href="#work">Work</Link>

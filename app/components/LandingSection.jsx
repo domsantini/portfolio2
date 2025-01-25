@@ -4,7 +4,7 @@ import RevealText from "./RevealText";
 import { motion, spring } from 'framer-motion'
 import useMotionTimeline from "../hooks/useMotionTimeline";
 
-export default function LandingSection() {
+export default function LandingSection({ id }) {
   const scope = useMotionTimeline([
     ['.hand-emoji', { rotate: '-10deg'}, { duration: 0.2, delay: 1}],
     ['.hand-emoji', { rotate: '10deg'},{ duration: 0.25} ],
@@ -12,7 +12,7 @@ export default function LandingSection() {
   ]);
   
   return (
-    <section ref={scope} className="h-[100dvh] p-4 md:px-8 lg:px-20 lg:pb-8">
+    <section id={id} ref={scope} className="sticky top-0 h-[100dvh] p-4 md:px-8 lg:px-20 lg:pb-8">
       <div className='flex flex-col justify-end h-full'>  
         <motion.p 
           initial={{ y: 10, opacity: 0}}

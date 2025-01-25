@@ -3,8 +3,8 @@ import { projects } from '@/app/data.js'
 
 function WorkSection({ id }) {  
   return (
-    <section id={id} className='relative h-screen flex flex-col justify-end pt-10 text-[#E6E8E3]'>
-      <div className='sticky top-0 h-full'>
+    <section id={id} className='relative min-h-screen h-[100dvh] flex flex-col justify-end pt-10 text-[#E6E8E3] bg-zinc-700'>
+      <div className='h-full'>
         
       </div>
       <h1 className="absolute bottom-2 text-[#E6E8E3] text-[clamp(50px,9vw,140px)] font-chillax font-semibold">Select Work</h1>    
