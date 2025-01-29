@@ -34,7 +34,8 @@ function WorkSection({ id }) {
               className='flex flex-col py-2 h-auto w-full cursor-pointer ' 
               onClick={() => handleProjectClick(title)}
             >
-              <div className='flex hover:pl-2 transition-all ease-in-out duration-[250ms]'>
+              <div className='flex'>
+              {/* <div className='flex hover:pl-2 transition-all ease-in-out duration-[250ms]'> */}
                 <span className='w-1/2 '>{title}</span>
                 <span className='w-1/2 '>{type}</span>
                 {/* <span className='w-1/2 md:w-1/3'>{title}</span>
@@ -49,19 +50,21 @@ function WorkSection({ id }) {
                     initial='closed'
                     animate='open'
                     exit='closed'
-                    className='space-y-4 overflow-y-hidden py-4'
+                    className='overflow-y-hidden'
                   >
-                    <p className='text-base'>{description}</p>
-                    <ul className='flex flex-wrap list-disc pl-4 gap-x-8 gap-y-2'>
-                      {stack.map((technology) => (
-                        <li key={`${id}-${technology}`}>{technology}</li>
-                      ))}
-                    </ul>
-                    {link && 
-                      <button className='py-1 px-3 text-sm sm:text-base bg-[#FBFCF8] text-zinc-700 rounded-full'>
-                        <Link href={link}>Check out site</Link>
-                      </button>
-                    }
+                    <div className='space-y-4 py-4'>  
+                      <p className='text-base'>{description}</p>
+                      <ul className='flex flex-wrap list-disc pl-4 gap-x-8 gap-y-2'>
+                        {stack.map((technology) => (
+                          <li key={`${id}-${technology}`}>{technology}</li>
+                        ))}
+                      </ul>
+                      {link && 
+                        <button className='py-1 px-3 text-sm sm:text-base bg-[#FBFCF8] text-zinc-700 rounded-full'>
+                          <Link href={link}>Check out site</Link>
+                        </button>
+                      }
+                    </div>
                   </motion.div>)}
               </AnimatePresence>
             </li>
