@@ -19,42 +19,47 @@ function WorkSection({ id }) {
   
   return (
     <section id={id} className='relative min-h-screen h-[100svh] flex flex-col justify-end pt-20 text-[#E6E8E3] bg-zinc-700 p-4 md:px-8 lg:px-20 lg:pb-8'>
-      <div className='grid place-items-center h-full'>
-        <ul className="w-full divide-y-2">
-          <li className='flex py-2'>
-            <span className='w-1/2 md:w-1/3'>Company / Project Name</span>
-            <span className='w-1/2 md:w-1/3'>Category</span>
-            <span className='hidden md:inline-block md:w-1/3'>Test</span>
+      <div className='grid place-items-center h-full text-sm sm:text-base'>
+        <ul className="w-full divide-y ">
+          <li className='flex py-2 text-[#FBFCF8] font-semibold'>
+            <span className='w-1/2 '>Company / Project</span>
+            <span className='w-1/2 '>Category</span>
+            {/* <span className='w-1/2 md:w-1/3'>Company / Project</span>
+            <span className='w-1/2 md:w-1/3'>Category</span> */}
+            {/* <span className='hidden md:inline-block md:w-1/3'>Test</span> */}
           </li>
           {projects.map(({ id, title, description, type, link, stack }, i) => (
             <li 
               key={id} 
-              className='flex flex-col py-2 h-auto cursor-pointer' 
+              className='flex flex-col py-2 h-auto w-full cursor-pointer ' 
               onClick={() => handleProjectClick(title)}
             >
-              <div className='flex'>
-                <span className='w-1/2 md:w-1/3 pl-2'>{title}</span>
-                <span className='w-1/2 md:w-1/3 pl-2'>{type}</span>
+              <div className='flex hover:pl-2 transition-all ease-in-out duration-[250ms]'>
+                <span className='w-1/2 '>{title}</span>
+                <span className='w-1/2 '>{type}</span>
+                {/* <span className='w-1/2 md:w-1/3'>{title}</span>
+                <span className='w-1/2 md:w-1/3'>{type}</span> */}
               </div>  
               <AnimatePresence>  
                 {activeProject === title && 
                   (<motion.div
+                    layout
                     key={`${title}-desc`}
                     variants={projectVariants}
                     initial='closed'
                     animate='open'
                     exit='closed'
-                    className='overflow-hidden'
+                    className='space-y-4 overflow-y-hidden py-4'
                   >
-                    <p>{description}</p>
-                    <ul>
+                    <p className='text-base'>{description}</p>
+                    <ul className='flex flex-wrap list-disc pl-4 gap-x-8 gap-y-2'>
                       {stack.map((technology) => (
                         <li key={`${id}-${technology}`}>{technology}</li>
                       ))}
                     </ul>
                     {link && 
-                      <button className='py-1 px-2 border border-solid border-[#FBFCF8] text-[#FBFCF8]'>
-                        <Link href={link}>Check it out!</Link>
+                      <button className='py-1 px-3 text-sm sm:text-base bg-[#FBFCF8] text-zinc-700 rounded-full'>
+                        <Link href={link}>Check out site</Link>
                       </button>
                     }
                   </motion.div>)}
@@ -63,7 +68,7 @@ function WorkSection({ id }) {
           ))}
         </ul>
       </div>
-      <h1 className="absolute bottom-2 text-[#E6E8E3] text-[clamp(50px,9vw,140px)] font-chillax font-semibold">Select Work</h1>    
+      <h1 className="absolute bottom-2 text-[#E6E8E3] text-[clamp(45px,9vw,140px)] font-chillax font-semibold">Select Work</h1>    
     </section>
   )
 }
@@ -80,18 +85,18 @@ const projectVariants ={
   open: {
     height: "auto",
     // marginTop: "1rem",
-    // transition: {
-    //   duration: 0.3,
-    //   ease: "easeOut"
-    // }
+    transition: {
+      duration: 0.3,
+      ease: "easeOut"
+    }
   },
   closed: {
     height: 0,
     // marginTop: 0,
-    // transition: {
-    //   duration: 0.3,
-    //   ease: "easeIn"
-    // }
+    transition: {
+      duration: 0.3,
+      ease: "easeIn"
+    }
   }
 }
 
