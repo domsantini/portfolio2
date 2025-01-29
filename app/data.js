@@ -12,7 +12,6 @@ export const projects = [
     title: 'Growthware',
     description: 'Built out website template offering for small business clients.',
     type: 'Work',
-    link:'lkj',
     stack: ['React', 'TypeScript', 'TailwindCSS'],
   },
   {

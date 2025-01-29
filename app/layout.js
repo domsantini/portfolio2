@@ -1,7 +1,7 @@
 import { ABeeZee, Inter } from "next/font/google";
 import "./globals.css";
+import { PageContextProvider } from "./context/pageContext";
 
-const inter = Inter({ subsets: ["latin"] });
 const abeezee = ABeeZee({ subsets: ["latin"], weight: ['400'] });
 
 export const metadata = {
@@ -11,8 +11,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={abeezee.className}>{children}</body>
+    <html lang="en" className={abeezee.className}>
+      <PageContextProvider>  
+        <body>{children}</body>
+      </PageContextProvider>
     </html>
   );
 }

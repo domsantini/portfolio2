@@ -1,0 +1,11 @@
+.backdrop {
+  position: absolute;
+  inset: 0;
+  height: 200%;
+  backdrop-filter: 16px;
+  mask-image: linear-gradient(
+    to bottom,
+    #FBFCF8 0% 50%,
+    transparent 50% 100%
+  );
+}

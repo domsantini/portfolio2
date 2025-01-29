@@ -15,9 +15,9 @@ export function PageContextProvider({ children }) {
   }
   
   return (
-    <PageContextProvider.Provider value={value}>
+    <PageContext.Provider value={value}>
       {children}
-    </PageContextProvider.Provider>
+    </PageContext.Provider>
   )
 }
 
