@@ -1,8 +1,30 @@
-.backdrop {
+.header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 4rem;
+  height: 90px;  
+}
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  height: 100%;
+}
+.ul {
+  height: 200%;
+  display: flex;
   position: absolute;
   inset: 0;
-  height: 200%;
-  backdrop-filter: 16px;
+  /* background-color: #FBFCF8; */
+  border: 2px solid greenyellow;
+  border-radius: 25px;
+  backdrop-filter: blur(16px);
   mask-image: linear-gradient(
     to bottom,
     #FBFCF8 0% 50%,

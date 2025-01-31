@@ -1,0 +1,38 @@
+.header {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+.navbar{ 
+  position: relative; 
+  margin: 20px auto 0px auto;
+  padding: 0.5rem 1rem;
+  overflow: hidden;
+  border: 2px solid black;
+  border-radius: 9999px;
+}
+.navlist{
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  text-transform: uppercase;
+  z-index: 10;
+}
+.backdrop {
+  position: absolute;
+  inset: 0;
+  height: 200%;
+  z-index: 3;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.4);
+  mask-image: linear-gradient(
+    to bottom,
+    black 0% 50%,
+    transparent 50% 100%
+  );
+}
