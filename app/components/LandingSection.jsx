@@ -12,12 +12,12 @@ export default function LandingSection({ id, scrollYProgress, className }) {
     ['.hand-emoji', { rotate: '0deg'}, {duration: 0.25}],
   ]);
   
-  // const opacity = useTransform(scrollYProgress, [1,0.5], [1,0])
-  // const y = useTransform(scrollYProgress, [1,0.3], [0, 50])
+  const opacity = useTransform(scrollYProgress, [1,0.5], [1,0])
+  const y = useTransform(scrollYProgress, [1,0.3], [0, 50])
   
   return (
     <motion.section 
-      // style={{ opacity, y }}
+      style={{ opacity, y }}
       id={id} 
       ref={scope} 
       // className={`sticky top-0 h-[100svh] p-4 md:px-8 lg:px-20 lg:pb-8 ${className}`}
