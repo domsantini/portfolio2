@@ -5,7 +5,7 @@ import { projects } from '@/app/data.js'
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-function WorkSection({ id }) {  
+function WorkSection({ id, className }) {  
   
   const [activeProject, setActiveProject] = React.useState(undefined)
   
@@ -18,7 +18,7 @@ function WorkSection({ id }) {
   }
   
   return (
-    <section id={id} className='relative min-h-screen h-[100svh] flex flex-col justify-end pt-20 text-[#E6E8E3] bg-zinc-700 p-4 md:px-8 lg:px-20 lg:pb-8'>
+    <section id={id} className={`min-h-screen h-[100svh] flex flex-col justify-end pt-20 text-[#E6E8E3] bg-zinc-700 p-4 md:px-8 lg:px-20 lg:pb-8 ${className}`}>
       <div className='grid place-items-center h-full text-sm sm:text-base'>
         <ul className="w-full divide-y ">
           <li className='flex py-2 text-[#FBFCF8] font-semibold'>
