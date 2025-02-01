@@ -24,10 +24,10 @@ export default function Home() {
       <motion.div
         ref={wrapperRef}
         style={{ borderRadius }}
-        className="relative z-[2] overflow-clip min-h-screen bg-zinc-700 h-full border-solid border-zinc-700"
+        className="relative z-[2] overflow-clip min-h-screen bg-zinc-700 h-full border-solid"
       >
-        <WorkSection id="work" className='relative z-[2]'/>
-        <AboutSection id="about" className='relative z-[3]'/>
+        <WorkSection id="work" className='relative z-[5]'/>
+        <AboutSection id="about" className='relative z-[6]'/>
         <ContactSection className='sticky bottom-0 z-[1] bg-[#FBFCF8]'/>
       </motion.div>
 
