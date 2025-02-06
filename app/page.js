@@ -18,18 +18,18 @@ export default function Home() {
   const borderRadius = useTransform(scrollYProgress, [0, 1], [0, 40]);
 
   return (
-    <main className="relative h-full min-h-screen bg-[#FBFCF8]">
+    <main className="relative min-h-screen bg-[#FBFCF8]">
       {/* <Header /> */}
-      <LandingSection id="home" scrollYProgress={scrollYProgress} className='sticky top-0 z-[1] w-full'/>
-      <div
+      <LandingSection id="home" scrollYProgress={scrollYProgress}/>
+      {/* <WorkSection id="work" className='relative'/> */}
+      {/* <div
         ref={wrapperRef}
         // style={{ borderRadius }}
         className="relative z-[2] bg-zinc-700 h-full"
-      >
-        <WorkSection id="work" className='relative z-[5]'/>
+      > */}
         {/* <AboutSection id="about" className='relative z-[6]'/> */}
-        <ContactSection id='contact' className='sticky bottom-0 z-[3] bg-[#FBFCF8]'/>
-      </div>
+        {/* <ContactSection id='contact' className='sticky bottom-0 z-[3] bg-[#FBFCF8]'/> */}
+      {/* </div> */}
       {/* <motion.div
         ref={wrapperRef}
         // style={{ borderRadius }}
