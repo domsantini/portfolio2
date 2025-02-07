@@ -10,7 +10,8 @@ export default function LandingSection({ id, scrollYProgress }) {
   const scope = useMotionTimeline([
     ['.hand-emoji', { rotate: '-10deg'}, { duration: 0.2, delay: 1 }],
     ['.hand-emoji', { rotate: '10deg'},{ duration: 0.25 }],
-    ['.hand-emoji', { rotate: '0deg'}, { duration: 0.25 }],
+    ['.hand-emoji', { rotate: '-5deg'},{ duration: 0.25 }],
+    ['.hand-emoji', { rotate: '0deg'}, { duration: 0.1 }],
   ]);
   
   // const opacity = useTransform(scrollYProgress, [1,0.5], [1,0])
