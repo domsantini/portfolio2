@@ -21,7 +21,7 @@ export default function Home() {
     <main className="relative min-h-screen bg-[#FBFCF8]">
       {/* <Header /> */}
       <LandingSection id="home" scrollYProgress={scrollYProgress}/>
-      {/* <WorkSection id="work" className='relative'/> */}
+      <WorkSection id="work"/>
       {/* <div
         ref={wrapperRef}
         // style={{ borderRadius }}
