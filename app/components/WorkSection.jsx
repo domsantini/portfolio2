@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import SectionWrapper from "./SectionWrapper";
 import { projects } from '@/app/data.js'
 
-function WorkSection({ id, className }) {  
+function WorkSection({ id }) {  
   
   const [activeProject, setActiveProject] = React.useState(undefined)
   
@@ -25,7 +25,6 @@ function WorkSection({ id, className }) {
         pt-20
         flex flex-col
         text-[#E6E8E3] bg-zinc-700
-        border-2 border-solid
       '
     >
       <h1 className='text-[clamp(45px,9vw,140px)] font-chillax font-semibold'>

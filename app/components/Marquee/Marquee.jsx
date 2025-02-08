@@ -1,34 +1,27 @@
 import styles from './Marquee.module.css'
 import { motion } from 'framer-motion'
  
-export default function Marquee({ children }) {
+export default function Marquee({ children, className, scrollDirection='forward', props }) {
   
-  // const marqueeAnimation = {
-  //   x: ['0%', '-100%'],
-  //   transition: {
-  //     duration: 5,
-  //     ease: 'linear',
-  //     repeat: Infinity,
-  //   }
-  // }
+  const scrollDir = scrollDirection === 'forward' ? '100%' : '-100%'
   
   return (
-    <div className={styles.marqueeContainer}>
+    <div className={`${styles.marqueeContainer} ${className}`} {...props}>
       <motion.div
         className={styles.marqueeText}
-        animate={{ x: '-100%'}}
+        animate={{ x: scrollDir }}
         transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
       >
-        <p>{ children }</p>
-        <p>{ children }</p>
+        { children }
+        { children }
       </motion.div>
       <motion.div
         className={styles.marqueeText}
-        animate={{ x: '-100%'}}
+        animate={{ x: scrollDir }}
         transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
       >
-        <p>{ children }</p>
-        <p>{ children }</p>
+        { children }
+        { children }
       </motion.div>
     </div>
   )

@@ -22,12 +22,12 @@ export default function Home() {
       {/* <Header /> */}
       <LandingSection id="home" scrollYProgress={scrollYProgress}/>
       <WorkSection id="work"/>
+      <AboutSection id="about"/>
       {/* <div
         ref={wrapperRef}
         // style={{ borderRadius }}
         className="relative z-[2] bg-zinc-700 h-full"
       > */}
-        {/* <AboutSection id="about" className='relative z-[6]'/> */}
         {/* <ContactSection id='contact' className='sticky bottom-0 z-[3] bg-[#FBFCF8]'/> */}
       {/* </div> */}
       {/* <motion.div
