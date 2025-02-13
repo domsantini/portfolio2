@@ -20,7 +20,7 @@ export default function LandingSection({ id }) {
 
     <SectionWrapper
       id={id}
-      className='sticky top-0'
+      className='sticky top-0 h-[100svh]'
     >
       
       <div className={styles.background}>
