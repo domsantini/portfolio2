@@ -6,6 +6,8 @@
   width: 100%;
   background-color: #FBFCF8;
   overflow: clip;
+  -webkit-backdrop-filter: blur(20vmax);
+  backdrop-filter: blur(20vmax);
 }
 .foreground {
   height: 100%;

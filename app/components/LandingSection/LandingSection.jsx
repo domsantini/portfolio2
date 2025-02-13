@@ -1,12 +1,15 @@
 'use client'
+import { motion, useTransform } from 'framer-motion'
 
 import RevealText from "../RevealText";
-import SectionWrapper from "../SectionWrapper";
 import styles from './Landing.module.css'
-import { motion, useTransform } from 'framer-motion'
 import useMotionTimeline from "../../hooks/useMotionTimeline";
 
-export default function LandingSection({ id }) {
+
+export default function LandingSection({ id, scrollYProgress }) {
+  
+  const y = useTransform(scrollYProgress, [0,0.7], [0, -50])
+  const opacity = useTransform(scrollYProgress, [0,0.7], [1, 0])
   
   const scope = useMotionTimeline([
     ['.hand-emoji', { rotate: '-10deg'}, { duration: 0.2, delay: 1 }],
@@ -15,12 +18,12 @@ export default function LandingSection({ id }) {
     ['.hand-emoji', { rotate: '0deg'}, { duration: 0.1 }],
   ]);
     
-  
   return (
     <section
       id={id}
       className='
-        sticky top-0 h-[100svh] w-full
+        h-[100svh] w-full
+        sticky top-0 z-[1]
       '
     > 
       <div className={styles.background}>
@@ -29,8 +32,9 @@ export default function LandingSection({ id }) {
         <div className={styles.circle2}/>
         <div className={styles.circle3}/>
       </div>
-      <div 
+      <motion.div 
         className={styles.foreground}
+        style={{ y, opacity }}
       >
         <motion.p 
           initial={{ y: 10, opacity: 0}}
@@ -69,7 +73,7 @@ export default function LandingSection({ id }) {
             </motion.span>
           </RevealText>
         </h1>
-      </div>
+      </motion.div>
     </section>
   )
 };
