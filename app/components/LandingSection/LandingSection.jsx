@@ -19,9 +19,10 @@ export default function LandingSection({ id }) {
   return (
     <section
       id={id}
-      className='sticky top-0 z-[1] h-[100svh] w-full p-4 md:px-8 lg:px-20'
-    >
-      
+      className='
+        sticky top-0 h-[100svh] w-full
+      '
+    > 
       <div className={styles.background}>
         <div className={styles.blur}/>
         <div className={styles.circle1}/>
@@ -31,47 +32,43 @@ export default function LandingSection({ id }) {
       <div 
         className={styles.foreground}
       >
-        <SectionWrapper
-          className='flex flex-col justify-end'
+        <motion.p 
+          initial={{ y: 10, opacity: 0}}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{            
+            ease: "easeInOut",
+            delay: '0.7',
+            duration: '0.4'
+          }}
+
+          className='text-sm lg:text-base leading-3 text-pretty mb-24 mx-auto xs:ml-auto xs:mr-0 max-w-[285px] lg:max-w-[410px]'
         >
-          <motion.p 
-            initial={{ y: 10, opacity: 0}}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{            
-              ease: "easeInOut",
-              delay: '0.7',
-              duration: '0.4'
-            }}
+          <span className='block leading-snug'>
+            I design and develop digital experiences that combine clean aesthetics and tasteful animations. 
+          </span>
+          <br />
+          <span className='block leading-snug'>
+            My focus is on the polish that makes users pause and feel something extraordinary. 
+          </span>
+        </motion.p>
+        <h1 
+          ref={scope} 
+          className="font-chillax pb-2 font-semibold text-[clamp(50px,9vw,140px)]"
 
-            className='text-sm lg:text-base leading-3 text-pretty mb-24 mx-auto xs:ml-auto xs:mr-0 max-w-[285px] lg:max-w-[410px]'
-          >
-            <span className='block leading-snug'>
-              I design and develop digital experiences that combine clean aesthetics and tasteful animations. 
-            </span>
-            <br />
-            <span className='block leading-snug'>
-              My focus is on the polish that makes users pause and feel something extraordinary. 
-            </span>
-          </motion.p>
-          <h1 
-            ref={scope} 
-            className="font-chillax pb-2 font-semibold text-[clamp(50px,9vw,140px)]"
-
-          >
-            <RevealText duration='0.5' delay='0.6'>Hey!</RevealText>
-            <RevealText duration='0.5' delay="0.7">
-              {`I'm Dom `} 
-              <motion.span 
-                className='inline-block hand-emoji' 
-                style={{ 
-                  transformOrigin: 'bottom right',
-                }}          
-              >
-                👋🏼
-              </motion.span>
-            </RevealText>
-          </h1>
-        </SectionWrapper>
+        >
+          <RevealText duration='0.5' delay='0.6'>Hey!</RevealText>
+          <RevealText duration='0.5' delay="0.7">
+            {`I'm Dom `} 
+            <motion.span 
+              className='inline-block hand-emoji' 
+              style={{ 
+                transformOrigin: 'bottom right',
+              }}          
+            >
+              👋🏼
+            </motion.span>
+          </RevealText>
+        </h1>
       </div>
     </section>
   )
