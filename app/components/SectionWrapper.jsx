@@ -8,7 +8,7 @@ function SectionWrapper({ className, children, props }) {
   return (
     <motion.section
       className={`
-        min-h-[100svh] w-full p-4 md:px-8 lg:px-20
+        min-h-[100svh] h-screen w-full p-4 md:px-8 lg:px-20
         ${className}
       `}
       {...props}
