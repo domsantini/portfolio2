@@ -12,7 +12,7 @@ export default function Home() {
     <main className="relative h-full bg-[#FBFCF8]">
       {/* <Header /> */}
       <LandingSection id="home"/>
-      <WorkSection id="work"/>
+      {/* <WorkSection id="work"/> */}
   
       {/* <AboutSection id="about"/> */}
       
