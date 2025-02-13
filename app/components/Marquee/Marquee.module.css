@@ -1,9 +1,7 @@
 .marqueeContainer {
   --gap: 2rem;
-  
   display: flex;
   flex: 0 0 auto;
-  
   overflow: hidden;
   width: 100%;
 }
@@ -11,7 +9,7 @@
 .marqueeText {
   display: flex;
   flex: 0 0 auto;
-  gap: 2rem;
+  gap: var(--gap);
   padding-right: 1rem;
   padding-left: 1rem;
   

@@ -6,13 +6,7 @@ import Marquee from "./Marquee/Marquee";
 import SkillPill from './SkillPill';
 
 function AboutSection({ id }) {
-  const [windowWidth, setWindowWidth] = React.useState(0)
-  const marqueeRef = React.useRef(undefined)
-  
-  React.useEffect(() => {
-    const windowWidth = window.innerWidth;
-    setWindowWidth(windowWidth)
-  }, [])
+
   
   return (
     <SectionWrapper
@@ -28,7 +22,7 @@ function AboutSection({ id }) {
         About Me
       </h1>
       <div className='flex flex-col justify-center flex-grow gap-10 h-full -mx-28 text-[3vw] uppercase' >
-        <Marquee ref={marqueeRef} className='bg-black rotate-[5deg] py-8 space-x-4' scrollDirection='forward'>
+        <Marquee className='bg-black rotate-[5deg] py-4' scrollDirection='forward'>
           <SkillPill className='border-[#A1A1AA] text-[#A1A1AA]'>React</SkillPill>
           <SkillPill className='border-[#A1A1AA] text-[#A1A1AA]'>TypeScript</SkillPill>
           <SkillPill className='border-[#A1A1AA] text-[#A1A1AA]'>JavaScript</SkillPill>

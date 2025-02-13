@@ -1,0 +1,110 @@
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: #FBFCF8;
+  overflow: clip;
+}
+.foreground {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+.blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  backdrop-filter: blur(20vmax);
+}
+ 
+/* 
+ 
+*/
+.circle1 {
+  position: absolute;
+  top: 30%;
+  aspect-ratio: 1;
+  height: 500px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, hsla(90, 90%, 50%, 0.3), aliceblue);
+  animation: rotate1 45s infinite;
+  z-index: 3;
+}
+.circle2 {
+  position: absolute;
+  bottom: -20%;
+  right: 0;
+  aspect-ratio: 1;
+  height: 500px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, hsla(194, 100%, 49%, 0.6), aliceblue);
+  animation: rotate2 40s infinite;
+  z-index: 2;
+}
+.circle3 {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  aspect-ratio: 1;
+  height: 250px;
+  border-radius: 50%;
+  background: aliceblue;  
+  animation: circle3animation 20s infinite;
+  z-index: 4;
+}  
+  
+
+@keyframes rotate1 {
+  from {
+    rotate: 0deg;
+    right: 0;
+  }
+  50% {
+    scale: 1.5 1;
+    right: 90%
+  }
+  to {
+    rotate: 360deg; 
+    right: 0;
+  } 
+}
+@keyframes rotate2 {
+  from {
+    rotate: 0deg;
+    left: 0;
+  }
+  50% {
+    scale: 1 1.5;
+    left: 90%
+  }
+  to {
+    rotate: 360deg; 
+    left: 0;
+  } 
+}
+@keyframes circle3animation {
+  from {
+    right: 0;
+  }
+  30% {
+    scale: 2 1;
+  }
+  50% {
+    right: 80%;
+    scale: 1;
+  }
+  70% {
+    scale: 0.8 1.2;
+  }
+  to {
+    
+    right: 0; 
+  } 
+}
+
