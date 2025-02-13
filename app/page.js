@@ -9,7 +9,7 @@ import ContactSection from "./components/ContactSection";
 export default function Home() {
 
   return (
-    <main className="relative min-h-[100svh] h-full bg-[#FBFCF8]">
+    <main className="relative h-full bg-[#FBFCF8]">
       {/* <Header /> */}
       <LandingSection id="home"/>
       <WorkSection id="work"/>

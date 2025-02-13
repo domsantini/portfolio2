@@ -22,7 +22,7 @@ function WorkSection({ id }) {
     <section
       id={id}
       className='
-        relative z-[2] min-h-[100svh] p-4 md:px-8 lg:px-20 mb-[calc(100dvh-100svh)]
+        relative z-[2] min-h-[100svh] h-screen p-4 md:px-8 lg:px-20
         pt-20
         flex flex-col
         text-[#E6E8E3] bg-zinc-700
