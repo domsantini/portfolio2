@@ -18,7 +18,7 @@ const WorkSection = forwardRef(function WorkSection({ id }, ref ) {
       <h1 className='text-[clamp(45px,9vw,140px)] font-chillax font-semibold pb-20'>
         Projects / Work
       </h1>
-      <div className='flex h-full text-sm sm:text-base'>
+      <div className='flex h-full text-sm sm:text-base pb-[calc(100dvh-100svh)]'>
         <ProjectsList />
       </div>
     </section>
