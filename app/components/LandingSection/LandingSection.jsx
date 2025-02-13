@@ -17,9 +17,9 @@ export default function LandingSection({ id }) {
     
   
   return (
-    <div
+    <section
       id={id}
-      className='sticky top-0 h-[100svh]'
+      className='sticky top-0 z-[1] h-[100svh] mb-[calc(100dvh-100svh)] w-full p-4 md:px-8 lg:px-20'
     >
       
       <div className={styles.background}>
@@ -73,7 +73,7 @@ export default function LandingSection({ id }) {
           </h1>
         </SectionWrapper>
       </div>
-    </div>
+    </section>
   )
 };
   

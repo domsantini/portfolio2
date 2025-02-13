@@ -19,10 +19,10 @@ function WorkSection({ id }) {
   }
   
   return (
-    <SectionWrapper
+    <section
       id={id}
       className='
-        relative z-[2]
+        relative z-[2] min-h-[100svh] p-4 md:px-8 lg:px-20 mb-[calc(100dvh-100svh)]
         pt-20
         flex flex-col
         text-[#E6E8E3] bg-zinc-700
@@ -77,7 +77,7 @@ function WorkSection({ id }) {
             ))}
         </ul>
       </div>
-    </SectionWrapper>      
+    </section>      
     )
   }
   
