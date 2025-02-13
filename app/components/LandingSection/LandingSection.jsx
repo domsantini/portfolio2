@@ -17,8 +17,7 @@ export default function LandingSection({ id }) {
     
   
   return (
-
-    <SectionWrapper
+    <div
       id={id}
       className='sticky top-0 h-[100svh]'
     >
@@ -74,7 +73,7 @@ export default function LandingSection({ id }) {
           </h1>
         </SectionWrapper>
       </div>
-    </SectionWrapper>
+    </div>
   )
 };
   
