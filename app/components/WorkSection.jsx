@@ -9,7 +9,7 @@ const WorkSection = forwardRef(function WorkSection({ id }, ref ) {
       ref={ref} 
       id={id}
       className='
-        relative z-[2] min-h-[100svh] h-screen p-4 md:px-8 lg:px-20
+        relative z-[2] min-h-screen h-full p-4 md:px-8 lg:px-20
         pt-20
         flex flex-col
         text-[#E6E8E3] bg-zinc-700

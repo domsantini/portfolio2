@@ -11,6 +11,7 @@ import ContactSection from "./components/ContactSection";
 export default function Home() {
   const wrapperRef = React.useRef(null)
   const { scrollYProgress } = useScroll({
+    layoutEffect: false,
     target: wrapperRef,
     offset: ['start end', 'start start']
   })
@@ -26,12 +27,12 @@ export default function Home() {
       <LandingSection id="home" scrollYProgress={scrollYProgress}/>
       <div className='relative z-[2]'>
         <WorkSection ref={wrapperRef} id="work"/>
+        <AboutSection id="about"/>
       </div>
     </main>
   );
 }
 
-{/* <AboutSection id="about"/> */}
 {/* <div
   ref={wrapperRef}
   // style={{ borderRadius }}
