@@ -34,7 +34,7 @@ export default function LandingSection({ id, scrollYProgress }) {
       </div>
       <motion.div 
         className={styles.foreground}
-        style={{ willChange: 'transform, opacity', y, opacity }}
+        style={{ willChange: 'transform, opacity', translateY: y, opacity, translateZ: 0 }}
       >
         <motion.p 
           initial={{ y: 10, opacity: 0}}
