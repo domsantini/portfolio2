@@ -11,15 +11,14 @@ import ContactSection from "./components/ContactSection";
 export default function Home() {
   const wrapperRef = React.useRef(null)
   const { scrollYProgress } = useScroll({
-    layoutEffect: false,
     target: wrapperRef,
     offset: ['start end', 'start start']
   })
 
   // This is how you log a motion value
-  // useMotionValueEvent(scrollYProgress, "change", (latest) => {
-  //   console.log("Page scroll: ", latest)
-  // })
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    console.log("Page scroll: ", latest)
+  })
   
   return (
     <main className="relative h-full bg-[#FBFCF8]">

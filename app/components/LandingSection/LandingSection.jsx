@@ -34,7 +34,7 @@ export default function LandingSection({ id, scrollYProgress }) {
       </div>
       <motion.div 
         className={styles.foreground}
-        style={{ y, opacity }}
+        style={{ willChange: 'transform, opacity', y, opacity }}
       >
         <motion.p 
           initial={{ y: 10, opacity: 0}}
@@ -44,7 +44,6 @@ export default function LandingSection({ id, scrollYProgress }) {
             delay: '0.7',
             duration: '0.4'
           }}
-
           className='text-sm lg:text-base leading-3 text-pretty mb-24 mx-auto xs:ml-auto xs:mr-0 max-w-[285px] lg:max-w-[410px]'
         >
           <span className='block leading-snug'>
@@ -55,10 +54,9 @@ export default function LandingSection({ id, scrollYProgress }) {
             My focus is on the polish that makes users pause and feel something extraordinary. 
           </span>
         </motion.p>
-        <h1 
+        <motion.h1 
           ref={scope} 
           className="font-chillax pb-2 font-semibold text-[clamp(50px,9vw,140px)]"
-
         >
           <RevealText duration='0.5' delay='0.6'>Hey!</RevealText>
           <RevealText duration='0.5' delay="0.7">
@@ -72,7 +70,7 @@ export default function LandingSection({ id, scrollYProgress }) {
               👋🏼
             </motion.span>
           </RevealText>
-        </h1>
+        </motion.h1>
       </motion.div>
     </section>
   )
