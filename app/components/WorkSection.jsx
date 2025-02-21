@@ -25,8 +25,4 @@ const WorkSection = forwardRef(function WorkSection({ id }, ref ) {
   )
 })
  
-
-
-      
 export default WorkSection;
-      

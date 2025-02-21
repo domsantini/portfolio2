@@ -1,7 +1,13 @@
+'use client'
+import React from 'react'
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 
 function ProjectListItem({ id, title, description, type, link, stack, activeProject, setActiveProject }) {
+  
+  const listItemRef = React.useRef(null)
+  const isInView = useInView(listItemRef, { once: true })
+  const width = isInView ? '100%' : '0%';
   
   function handleProjectClick(title) {
     if (activeProject === title) {
@@ -12,12 +18,17 @@ function ProjectListItem({ id, title, description, type, link, stack, activeProj
   }
   
   return (
-    <li 
+    <li
+      ref={listItemRef}
       key={id} 
-      className='flex flex-col py-2 h-auto w-full cursor-pointer ' 
+      className='flex flex-col pb-2 h-auto w-full cursor-pointer' 
       onClick={() => handleProjectClick(title)}
     >
-      <div className='flex'>
+      <motion.div 
+        className='will-change-transform h-[1px] w-full bg-[#FBFCF8] transition-all duration-[1.7s] ease-[cubic-bezier(0.76,0,0.24,1)] ' 
+        style={{ width }}
+      />
+      <div className='flex pt-2'>
         <span className='w-1/2 text-xs sm:text-base'>{title}</span>
         <span className='w-1/2 text-xs sm:text-base pl-4'>{type}</span>
       </div>  

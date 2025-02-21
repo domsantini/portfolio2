@@ -1,12 +1,18 @@
 'use client'
-import { motion, useTransform } from 'framer-motion'
+import { motion, useInView, useTransform, useMotionValueEvent } from 'framer-motion'
 
 import RevealText from "../RevealText";
 import styles from './Landing.module.css'
 import useMotionTimeline from "../../hooks/useMotionTimeline";
+import React from 'react';
 
 
 export default function LandingSection({ id, scrollYProgress }) {
+  const [isGradientPaused, setIsGradientPaused] = React.useState(false)
+   
+  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+    setIsGradientPaused(latest > 0.15)
+  })
   
   const y = useTransform(scrollYProgress, [0,0.7], [0, -50])
   const opacity = useTransform(scrollYProgress, [0,0.7], [1, 0])
@@ -28,9 +34,9 @@ export default function LandingSection({ id, scrollYProgress }) {
     > 
       <div className={styles.background}>
         <div className={styles.blur}/>
-        <div className={styles.circle1}/>
-        <div className={styles.circle2}/>
-        <div className={styles.circle3}/>
+        <motion.div style={{ '--playState': isGradientPaused ? 'paused' : 'running' }} className={styles.circle1}/>
+        <motion.div style={{ '--playState': isGradientPaused ? 'paused' : 'running' }} className={styles.circle2}/>
+        <motion.div style={{ '--playState': isGradientPaused ? 'paused' : 'running' }} className={styles.circle3}/>
       </div>
       <motion.div 
         className={styles.foreground}

@@ -16,9 +16,9 @@ export default function Home() {
   })
 
   // This is how you log a motion value
-  // useMotionValueEvent(scrollYProgress, "change", (latest) => {
-  //   console.log("Page scroll: ", latest)
-  // })
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    console.log("Page scroll: ", latest)
+  })
   
   return (
     <main className="relative h-full bg-[#FBFCF8]">
