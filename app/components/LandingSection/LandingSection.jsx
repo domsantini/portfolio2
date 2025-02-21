@@ -32,12 +32,12 @@ export default function LandingSection({ id, scrollYProgress }) {
         sticky top-0 z-[1]
       '
     > 
-      <div className={styles.background}>
+      {/* <div className={styles.background}>
         <div className={styles.blur}/>
         <motion.div style={{ '--playState': isGradientPaused ? 'paused' : 'running' }} className={styles.circle1}/>
         <motion.div style={{ '--playState': isGradientPaused ? 'paused' : 'running' }} className={styles.circle2}/>
         <motion.div style={{ '--playState': isGradientPaused ? 'paused' : 'running' }} className={styles.circle3}/>
-      </div>
+      </div> */}
       <motion.div 
         className={styles.foreground}
         style={{ willChange: 'transform, opacity', translateY: y, opacity, translateZ: 0 }}
