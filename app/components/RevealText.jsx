@@ -1,5 +1,5 @@
 'use client'
-import { animate, motion, spring } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 function RevealText({ duration, ease='easeInOut', delay='1', children, ...props }) {
   return (

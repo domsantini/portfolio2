@@ -2,11 +2,12 @@
 import React from "react";
 import { useScroll, useMotionValueEvent } from 'framer-motion';
 
+
 import Header from "./components/Header/Header";
 import LandingSection from "./components/LandingSection/LandingSection";
 import WorkSection from "./components/WorkSection";
 import AboutSection from "./components/AboutSection";
-import ContactSection from "./components/ContactSection";
+import ContactButton from "./components/ContactButton";
 
 export default function Home() {
   const wrapperRef = React.useRef(null)
@@ -16,19 +17,30 @@ export default function Home() {
   })
 
   // This is how you log a motion value
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    console.log("Page scroll: ", latest)
-  })
+  // useMotionValueEvent(scrollYProgress, "change", (latest) => {
+  //   console.log("Page scroll: ", latest)
+  // })
   
   return (
-    <main className="relative h-full bg-[#FBFCF8]">
-      {/* <Header /> */}
-      <LandingSection id="home" scrollYProgress={scrollYProgress}/>
-      <div className='relative z-[2]'>
-        <WorkSection ref={wrapperRef} id="work"/>
-        <AboutSection id="about"/>
-      </div>
-    </main>
+    <>
+      <main className="relative h-full bg-[#FBFCF8] z-20">
+        <Header />
+        <LandingSection id="home" scrollYProgress={scrollYProgress}/>
+        <div className='relative z-[2]'>
+          <WorkSection ref={wrapperRef} id="work"/>
+          <AboutSection id="about"/>
+        </div>
+      </main>
+      <footer className='relative h-[100dvh] bg-[#FBFCF8]'>
+        <div className='h-full w-full fixed bottom-0 flex flex-col justify-center items-center'>
+          <p className='font-chillax font-semibold text-[12vw]'>Get in touch!</p>
+          <div className='flex  gap-2'>
+            <ContactButton label='LinkedIn' href='https://www.linkedin.com/in/dominic-santini/'/>
+            <ContactButton label='GitHub' href='https://github.com/domsantini'/>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 }
 

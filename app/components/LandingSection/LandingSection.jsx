@@ -50,7 +50,7 @@ export default function LandingSection({ id, scrollYProgress }) {
             delay: '0.7',
             duration: '0.4'
           }}
-          className='text-sm lg:text-base leading-3 text-pretty mb-24 mx-auto xs:ml-auto xs:mr-0 max-w-[285px] lg:max-w-[410px]'
+          className='text-sm lg:text-base leading-3 text-pretty mb-24 mx-auto min-[450px]:ml-auto min-[450px]:mr-0 max-w-[285px] lg:max-w-[410px]'
         >
           <span className='block leading-snug'>
             I design and develop digital experiences that combine clean aesthetics and tasteful animations. 
