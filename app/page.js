@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
       <main className="relative h-full bg-[#FBFCF8] z-20">
-        <Header />
+        {/* <Header /> */}
         <LandingSection id="home" scrollYProgress={scrollYProgress}/>
         <div className='relative z-[2]'>
           <WorkSection ref={wrapperRef} id="work"/>
