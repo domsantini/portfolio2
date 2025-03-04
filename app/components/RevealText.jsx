@@ -8,6 +8,7 @@ function RevealText({ duration, ease='easeInOut', delay='1', children, ...props 
       animate='animate'
       className='block overflow-hidden whitespace-nowrap leading-[1.2]'
       transition={{ ease: [0.33, 1, 0.68, 1] }}
+      {...props}
     >
       <motion.div
         variants={{

@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import Marquee from './Marquee/Marquee';
 
 import RevealText from './RevealText';
 
@@ -17,16 +18,23 @@ function AboutSection({ id }) {
       <h1 className='pb-20 text-[clamp(45px,9vw,140px)] font-chillax font-semibold '>
         About Me
       </h1>
-      <div className='flex flex-col flex-grow text-sm sm:text-base lg:text-lg leading-snug text-pretty mb-24 mx-auto min-[450px]:ml-auto min-[450px]:mr-0 lg:max-w-[410px] '>
-        <p>I'm a Frontend Developer on a quest to master everything related to web development and creative coding. </p>
+      <div className='flex flex-col items-center flex-grow text-sm min-[500px]:text-lg leading-snug text-pretty max-w-[600px] px-2 sm:mx-auto whitespace-normal'>
+        <p>I'm a frontend developer who loves crafting beautiful, engaging web experiences. Drawn to clean design, I keep things simple—while adding just the right touch of fun.</p>
         <br/>
-        
-
+        <p>Right now, I’m focused on refining my animation skills, exploring the world of custom shaders, and mastering the small details that bring polish to a project.</p>
+        <br/>
+        <p>If I'm not coding, I'm likely training for a triathlon, reading great fiction, flipping through one of my (far too many) coffee table books, or spending time with the people who matter most.</p>
       </div>
-
     </section> 
   );
 }
+
+
+
+// upper section
+//I design and develop digital experiences that combine clean aesthetics and tasteful animations.
+
+// My focus is on the polish that makes users pause and feel something extraordinary.
 
 {/* <Marquee speed='45s'>
   <p>Next.js</p>
