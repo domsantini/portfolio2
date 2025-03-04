@@ -19,16 +19,17 @@ function AboutSection({ id }) {
         About Me
       </h1>
       <div className='flex flex-col items-center flex-grow text-sm min-[500px]:text-lg leading-snug text-pretty max-w-[600px] px-2 sm:mx-auto whitespace-normal'>
-        <p>I'm a frontend developer who loves crafting beautiful, engaging web experiences. Drawn to clean design, I keep things simple—while adding just the right touch of fun.</p>
+        <p>I&apos;m a frontend developer who loves crafting beautiful, engaging web experiences. Drawn to clean design, I keep things simple—while adding just the right touch of fun.</p>
         <br/>
-        <p>Right now, I’m focused on refining my animation skills, exploring the world of custom shaders, and mastering the small details that bring polish to a project.</p>
+        <p>Right now, I&apos;m focused on refining my animation skills, exploring the world of custom shaders, and mastering the small details that bring polish to a project.</p>
         <br/>
-        <p>If I'm not coding, I'm likely training for a triathlon, reading great fiction, flipping through one of my (far too many) coffee table books, or spending time with the people who matter most.</p>
+        <p>If I&apos;m not coding, I&apos;m likely training for a triathlon, reading great fiction, flipping through one of my (far too many) coffee table books, or spending time with the people who matter most.</p>
       </div>
     </section> 
   );
 }
 
+export default AboutSection;
 
 
 // upper section
@@ -76,4 +77,3 @@ function AboutSection({ id }) {
   <p aria-hidden='true'>The Raiders</p>
   <p aria-hidden='true'>Reading</p>
 </Marquee> */}
-export default AboutSection;
