@@ -1,12 +1,12 @@
 'use client'
 import { motion } from 'framer-motion'
 
-function RevealText({ duration, ease='easeInOut', delay='1', children, ...props }) {
+function RevealText({ duration='1', ease='easeInOut', delay='1', className, children, ...props }) {
   return (
     <motion.span
       initial='initial'
       animate='animate'
-      className='block overflow-hidden whitespace-nowrap leading-[1.2]'
+      className={`${className} block overflow-hidden whitespace-nowrap leading-[1.2] `}
       transition={{ ease: [0.33, 1, 0.68, 1] }}
       {...props}
     >

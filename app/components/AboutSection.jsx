@@ -2,7 +2,13 @@
 import React from 'react'
 import Marquee from './Marquee/Marquee';
 
-import RevealText from './RevealText';
+import RevealWord from './RevealWord';
+
+const PAGECOPY = [
+  `I'm a frontend developer who loves crafting beautiful, engaging web experiences. Drawn to clean design, I keep things simple—while adding just the right touch of fun.`,
+  `Right now, I'm focused on refining my animation skills, exploring the world of custom shaders, and mastering the small details that bring polish to a project.`,
+  `If I'm not coding, I'm likely training for a triathlon, reading great fiction, flipping through one of my (far too many) coffee table books, or spending time with the people who matter most.`
+]
 
 function AboutSection({ id }) {
   return (
@@ -19,11 +25,25 @@ function AboutSection({ id }) {
         About Me
       </h1>
       <div className='flex flex-col items-center flex-grow text-sm min-[500px]:text-lg leading-snug text-pretty max-w-[600px] px-2 sm:mx-auto whitespace-normal'>
-        <p>I&apos;m a frontend developer who loves crafting beautiful, engaging web experiences. Drawn to clean design, I keep things simple—while adding just the right touch of fun.</p>
+        {PAGECOPY.map((p, i) => {
+          return(
+            <div key={i} className='flex flex-wrap gap-1 pb-4 last:pb-0'>
+              {p.split(' ').map((word, i) => {
+                return (
+                  <RevealWord key={i} className='whitespace-normal'>
+                    {word}{' '}
+                  </RevealWord>
+                )
+              })}
+            </div>
+          )
+          
+        })}
+        {/* <p>I&apos;m a frontend developer who loves crafting beautiful, engaging web experiences. Drawn to clean design, I keep things simple—while adding just the right touch of fun.</p>
         <br/>
         <p>Right now, I&apos;m focused on refining my animation skills, exploring the world of custom shaders, and mastering the small details that bring polish to a project.</p>
         <br/>
-        <p>If I&apos;m not coding, I&apos;m likely training for a triathlon, reading great fiction, flipping through one of my (far too many) coffee table books, or spending time with the people who matter most.</p>
+        <p>If I&apos;m not coding, I&apos;m likely training for a triathlon, reading great fiction, flipping through one of my (far too many) coffee table books, or spending time with the people who matter most.</p> */}
       </div>
     </section> 
   );
