@@ -3,6 +3,10 @@ import Link from "next/link";
 import { motion } from 'framer-motion'
 
 import styles from "./Header.module.css";
+import React from "react";
+import { PageContext } from "@/app/context/pageContext";
+
+
 
 const NAV_ITEMS = [
   { title: "Home", href: "#" },
@@ -12,6 +16,9 @@ const NAV_ITEMS = [
 ];
 
 const Header = () => {
+  
+  const { currentPage, setCurrentPage } = React.useContext(PageContext);
+  
   return (
     <motion.header
       initial={{ y: -10, opacity: 0 }}
@@ -27,7 +34,11 @@ const Header = () => {
         <div className={styles.backdrop} />
         <ul className={styles.navlist}>
           {NAV_ITEMS.map(({ title, href }) => (
-            <li key={href}>
+            <li
+              onClick={() => setCurrentPage(title.toLocaleLowerCase())}
+              key={href} 
+              className={`${styles.navitem} ${currentPage == title.toLocaleLowerCase() ? styles.active : ''}`} 
+            >
               <Link href={href}>{title}</Link>
             </li>
           ))}

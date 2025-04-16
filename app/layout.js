@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={abeezee.className}>
       <meta name="viewport" content="minimum-scale=1"/>
       <PageContextProvider>  
-        <body>{children}</body>
+        <body className='relative'>{children}</body>
       </PageContextProvider>
     </html>
   );

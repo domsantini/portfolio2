@@ -2,7 +2,7 @@
 import React from "react";
 import { useScroll, useMotionValueEvent } from 'framer-motion';
 
-
+import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 import Header from "./components/Header/Header";
 import LandingSection from "./components/LandingSection/LandingSection";
 import WorkSection from "./components/WorkSection";
@@ -23,8 +23,9 @@ export default function Home() {
   
   return (
     <>
+      {/* <LoadingScreen curve='200px'/> */}
       <main className="relative h-full bg-[#FBFCF8] z-20">
-        {/* <Header /> */}
+        <Header />
         <LandingSection id="home" scrollYProgress={scrollYProgress}/>
         <div className='relative z-[2]'>
           <WorkSection ref={wrapperRef} id="work"/>

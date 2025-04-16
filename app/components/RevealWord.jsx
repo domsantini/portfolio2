@@ -15,7 +15,7 @@ function RevealWord({ duration='1', ease='easeInOut', delay='1', className, chil
         initial='initial'
         animate={isInView ? 'animate' : 'initial'}
         className={`${className} block w-fit overflow-hidden`}
-        transition={{ ease: [0.33, 1, 0.68, 1] }}
+        // transition={{ ease: "easeInOut", }}
         {...props}
       >
         <motion.div
@@ -26,7 +26,7 @@ function RevealWord({ duration='1', ease='easeInOut', delay='1', className, chil
           }}
           transition={{
             duration: '1',
-            ease: [0.33, 1, 0.68, 1],
+            ease: "easeInOut",
             delay: '0.3',
           }}
           {...props}

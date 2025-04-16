@@ -1,3 +1,14 @@
+@media (max-width: 360px) {
+  .header {
+    font-size: 12px;
+  }
+}
+@media (min-width: 361px) {
+  .header {
+    font-size: 16px;
+  }
+}
+
 .header {
   position: fixed;
   display: grid;
@@ -6,21 +17,6 @@
   right: 0;
   left: 0;
   z-index: 5;
-}
-.navbar{ 
-  position: relative; 
-  margin: 20px auto 0px auto;
-  padding: 0.5rem 1rem;
-  overflow: hidden;
-  border: 2px solid black;
-  border-radius: 9999px;
-}
-.navlist{
-  position: relative;
-  display: flex;
-  gap: 1rem;
-  text-transform: uppercase;
-  z-index: 10;
 }
 .backdrop {
   position: absolute;
@@ -35,4 +31,30 @@
     black 0% 50%,
     transparent 50% 100%
   );
+}
+.navbar{ 
+  position: relative; 
+  margin: 20px auto 0px auto;
+  padding: 10px;
+  overflow: hidden;
+  border: 2px solid black;
+  border-radius: 50px;
+}
+.navlist{
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  z-index: 10;
+}
+.navitem {
+  padding: 6px 10px;
+  margin: 0px 3px;
+  border-radius: calc(50px - 10px);
+  transition: all ease-out 0.3s ;
+}
+.active {
+  background: #3f3f46;
+  color: #FBFCF8;
+  transition: all ease-out 0.3s ;
 }
